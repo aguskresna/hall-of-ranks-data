@@ -73,8 +73,8 @@
     ]
   },
   "census_ahs": {
-    "fingerprint": "79d31f9c0eaae787fd352eda3c3d7efa974aba54754928b520ef3ab480e976c8",
-    "built": "2026-11-18T10:21:35+00:00",
+    "fingerprint": "384bcc7ac85bb50d487c0b5a9ed8e8cc1d0fcd2a3c306fac17bac5e99c670d5f",
+    "built": "2026-11-19T10:30:22+00:00",
     "datasets": [
       "us.ahs.size"
     ]
@@ -101,8 +101,8 @@
     ]
   },
   "fed_scf": {
-    "fingerprint": "a1ccbca120ce9aa324684106b0af6245d52642863d120dfb93d49efe615639b8",
-    "built": "2026-11-12T11:44:07+00:00",
+    "fingerprint": "5f6dc150bacd71fd3864d95c05164eecf65961621ab49cec92822baf8c52bd64",
+    "built": "2026-11-19T10:30:16+00:00",
     "datasets": [
       "us.fed.scf"
     ]
@@ -159,8 +159,8 @@
     ]
   },
   "opendosm": {
-    "fingerprint": "be2499b5a0eebfead566ca94ee0b855fc50e8a3513c571aacf32686c7bef463c",
-    "built": "2026-11-10T15:49:50+00:00",
+    "fingerprint": "27f803a906b0efbda6b1ccb2c96a3230368dddeb88999da269abda57c1e1a9e3",
+    "built": "2026-11-19T10:30:13+00:00",
     "datasets": [
       "my.hies.percentile",
       "my.wages",
