@@ -161,6 +161,8 @@ def cmd_sheet(args) -> int:
     out = Path(args.out) if args.out else sheet.SHEET
     n = sheet.export(out)
     print(f"{n} rows -> {out}")
+    if not args.out:
+        print(f"{sheet.export_owner()} rows -> {sheet.OWNER_SHEET}")
     return 0
 
 

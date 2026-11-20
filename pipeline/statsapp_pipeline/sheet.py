@@ -28,6 +28,8 @@ from . import i18n
 from .common import QUESTIONS_DIR
 
 SHEET = QUESTIONS_DIR / "i18n" / "translations.csv"
+# APP_RULES §5.2: an extra Indonesian sheet for the owner to check personally (same import).
+OWNER_SHEET = QUESTIONS_DIR / "i18n" / "translations_id_owner.csv"
 LANGUAGE_NAMES = {"id": "Indonesian", "ms": "Malay"}
 COLUMN_ORDER = ["id", "ms"]  # same order as app/docs/translations.csv
 
@@ -482,6 +484,25 @@ def export(path: Path = SHEET, catalog: dict | None = None, overlays: dict | Non
     w.writerows(body)
     Path(path).write_bytes(buf.getvalue().encode("utf-8-sig"))
     return len(body)
+
+
+def export_owner(path: Path = OWNER_SHEET, catalog: dict | None = None, overlays: dict | None = None) -> int:
+    """The short Indonesian sheet for the owner: key, where it appears, English, Indonesian, comment.
+    Corrections come back through `sheet-import` like the main sheet."""
+    from . import questions
+
+    catalog = catalog if catalog is not None else questions.load()
+    overlays = overlays if overlays is not None else i18n.load_overlays()
+    langs = [c for c in COLUMN_ORDER if c in overlays] + sorted(set(overlays) - set(COLUMN_ORDER))
+    full = rows(catalog, overlays)
+    idx = 12 + langs.index("id") if "id" in langs else None
+    buf = io.StringIO()
+    w = csv.writer(buf, quoting=csv.QUOTE_ALL, lineterminator=chr(10))
+    w.writerow(["#", "Key (do not change)", "Where", "English", "Indonesian (id) - current", "Comment"])
+    for r in full:
+        w.writerow([r[0], r[1], r[3], r[2], r[idx] if idx is not None else "", ""])
+    Path(path).write_bytes(buf.getvalue().encode("utf-8-sig"))
+    return len(full)
 
 
 # ---------------------------------------------------------------- import
