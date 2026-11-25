@@ -73,8 +73,8 @@
     ]
   },
   "census_ahs": {
-    "fingerprint": "61429019c62d860c429361f4650552397081bbf3802aaebd8faad7ca351fd0b0",
-    "built": "2026-11-24T12:39:06+00:00",
+    "fingerprint": "dc02165d67a0b6bc9135b20992196c39ed1965ccb529f17dcc505bf1f15f84a0",
+    "built": "2026-11-25T11:29:09+00:00",
     "datasets": [
       "us.ahs.size"
     ]
@@ -108,8 +108,8 @@
     ]
   },
   "fhfa_hpi": {
-    "fingerprint": "525f75a0d5092e13e675277b6d45cc38e4517ccccf3ef1a18a8648f6d779c173",
-    "built": "2026-11-12T09:57:46+00:00",
+    "fingerprint": "56009658c70dab99873caae8c596bda4201fe7b90b04ae01a3a84ca755a621a8",
+    "built": "2026-11-25T11:29:06+00:00",
     "datasets": [
       "us.fhfa.hpi"
     ]
