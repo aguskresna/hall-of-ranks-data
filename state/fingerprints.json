@@ -73,8 +73,8 @@
     ]
   },
   "census_ahs": {
-    "fingerprint": "f2cac360afa899fa51b96c45ea663a6e0e45bfc3808ff292fd1397269a3097d8",
-    "built": "2026-11-26T11:06:07+00:00",
+    "fingerprint": "c794fbc1e1726a6333e9abb168c3f9f87daf8121e9fa5d100dff5b73ac1818bb",
+    "built": "2026-11-27T11:00:55+00:00",
     "datasets": [
       "us.ahs.size"
     ]
